@@ -15,3 +15,6 @@ build/
 *.cbp
 CMakeCache.txt
 Makefile
+
+# IDE files
+.idea/
