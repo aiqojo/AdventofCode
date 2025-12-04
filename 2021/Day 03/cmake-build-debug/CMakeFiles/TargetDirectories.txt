@@ -1,3 +1,0 @@
-C:/Users/gian/Documents/AdventofCode/AdventofCode2021/Day 3/cmake-build-debug/CMakeFiles/Day_3.dir
-C:/Users/gian/Documents/AdventofCode/AdventofCode2021/Day 3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/gian/Documents/AdventofCode/AdventofCode2021/Day 3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

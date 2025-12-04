@@ -6,3 +6,12 @@ AdventofCode.code-workspace
 .pixi/*
 !.pixi/config.toml
 .DS_Store
+
+# CMake build artifacts
+cmake-build-debug/
+cmake-build-release/
+build/
+*.exe
+*.cbp
+CMakeCache.txt
+Makefile
