@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Gian <gian.cercena@greenmountainpower.com>"]
+channels = ["conda-forge"]
+name = "AdventofCode"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.13.*"
+tqdm = ">=4.67.1,<5"
