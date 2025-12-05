@@ -29,7 +29,6 @@ def overlapped(f1, f2):
 
 p2 = 0
 adjusted = False
-its = 0
 while True:
     adjusted = False
     cur_fresh = set()
