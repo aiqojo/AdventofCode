@@ -3,7 +3,7 @@ from scipy.spatial import KDTree
 import networkx as nx
 from tqdm import tqdm
 
-with open('d8-t.txt', 'r') as file:
+with open('d8.txt', 'r') as file:
     data = file.read().split("\n")
 
 d_np = [] #np
@@ -45,7 +45,7 @@ while not nx.is_connected(g): # part 2
             
     g.add_edge(d[closest_conn[0]], d[closest_conn[1]])
     # this print is pretty to watch
-    # print([len(c) for c in sorted(nx.connected_components(g), key=len, reverse=True)])
+    print([len(c) for c in sorted(nx.connected_components(g), key=len, reverse=True)])
 
 # part 1
 # comps = [len(c) for c in sorted(nx.connected_components(g), key=len, reverse=True)]
