@@ -18,17 +18,15 @@ g = nx.Graph()
 for p in d:
     g.add_node(p)
 
-n = 1000
-itr = 0
 seen = {}
+n = 1000
 # for i in tqdm(range(n)): # part 1
 while not nx.is_connected(g): # part 2
-    closest_conn = ()
-    closest_dist = np.inf
+    c_conn = ()
+    c_dist = np.inf
     for j, p in enumerate(d_np): # looking out from each node
         k_val = 2
-        searching = True
-        while searching: # trying to find closest connection
+        while True: # trying to find closest connection
             if (d[j], k_val) in seen:
                 dist, idx = seen[(d[j], k_val)]
             else:
@@ -38,12 +36,12 @@ while not nx.is_connected(g): # part 2
                 k_val += 1
                 continue # already have, next k
             
-            if dist[k_val-1] < closest_dist: # found new closest
-                closest_conn = (j, idx[k_val-1])
-                closest_dist = dist[k_val-1]
-            searching = False # found at least something
+            if dist[k_val-1] < c_dist: # found new closest
+                c_conn = (j, idx[k_val-1])
+                c_dist = dist[k_val-1]
+            break # found at least something
             
-    g.add_edge(d[closest_conn[0]], d[closest_conn[1]])
+    g.add_edge(d[c_conn[0]], d[c_conn[1]])
     # this print is pretty to watch
     print([len(c) for c in sorted(nx.connected_components(g), key=len, reverse=True)])
 
@@ -52,4 +50,4 @@ while not nx.is_connected(g): # part 2
 # print(comps[0] * comps[1] * comps[2])
 
 # part 2
-print(int(d[closest_conn[0]][0]) * int(d[closest_conn[1]][0]))
+print(int(d[c_conn[0]][0]) * int(d[c_conn[1]][0]))
